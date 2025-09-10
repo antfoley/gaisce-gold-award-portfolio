@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaisce Gold Award Portfolio - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background-color: #f9fafb;
+            line-height: 1.6;
+            color: #111827;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 50;
+        }
+        
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+        
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #4f46e5;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .nav-link.active {
+            background-color: #4f46e5;
+            color: white;
+        }
+        
+        .nav-link:not(.active) {
+            color: #374151;
+        }
+        
+        .nav-link:not(.active):hover {
+            background-color: #eef2ff;
+            color: #4f46e5;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #374151;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eef2ff 0%, #ffffff 50%, #f0fdfa 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #111827;
+        }
+        
+        .hero .highlight {
+            color: #4f46e5;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            max-width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4338ca;
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            color: #4f46e5;
+            border: 2px solid #4f46e5;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #f9fafb;
+        }
+        
+        /* Overview Section */
+        .overview {
+            background: white;
+            padding: 4rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+        
+        .section-header p {
+            font-size: 1.125rem;
+            color: #6b7280;
+            max-width: 32rem;
+            margin: 0 auto;
+        }
+        
+        .card-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        
+        .card {
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid;
+            transition: box-shadow 0.2s;
+        }
+        
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-indigo {
+            background-color: #eef2ff;
+            border-color: #e0e7ff;
+        }
+        
+        .card-teal {
+            background-color: #f0fdfa;
+            border-color: #ccfbf1;
+        }
+        
+        .card-orange {
+            background-color: #fff7ed;
+            border-color: #ffedd5;
+        }
+        
+        .card-purple {
+            background-color: #faf5ff;
+            border-color: #f3e8ff;
+        }
+        
+        .card-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-icon.indigo {
+            background-color: #4f46e5;
+        }
+        
+        .card-icon.teal {
+            background-color: #0d9488;
+        }
+        
+        .card-icon.orange {
+            background-color: #ea580c;
+        }
+        
+        .card-icon.purple {
+            background-color: #9333ea;
+        }
+        
+        .card-icon svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            stroke: white;
+            fill: none;
+            stroke-width: 2;
+        }
+        
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-indigo h3 {
+            color: #4338ca;
+        }
+        
+        .card-teal h3 {
+            color: #0f766e;
+        }
+        
+        .card-orange h3 {
+            color: #c2410c;
+        }
+        
+        .card-purple h3 {
+            color: #7c3aed;
+        }
+        
+        .card p {
+            color: #6b7280;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: #f9fafb;
+            padding: 4rem 0;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            max-width: 32rem;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            ring: 2px;
+            ring-color: #4f46e5;
+            border-color: #4f46e5;
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 6rem;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-submit:hover {
+            background-color: #4338ca;
+        }
+        
+        /* Footer */
+        footer {
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        footer p {
+            color: #6b7280;
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .mobile-menu {
+                display: none;
+                background: white;
+                border-top: 1px solid #e5e7eb;
+                padding: 1rem;
+            }
+            
+            .mobile-menu.show {
+                display: block;
+            }
+            
+            .mobile-nav-link {
+                display: block;
+                padding: 0.75rem;
+                text-decoration: none;
+                border-radius: 0.5rem;
+                margin-bottom: 0.25rem;
+                font-weight: 500;
+            }
+            
+            .mobile-nav-link.active {
+                background-color: #4f46e5;
+                color: white;
+            }
+            
+            .mobile-nav-link:not(.active) {
+                color: #374151;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div>
+                <h1 class="nav-brand">Gaisce Gold Award</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pillars.html" class="nav-link">Challenge Areas</a>
+                <a href="residential.html" class="nav-link">Residential</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-button">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html" class="mobile-nav-link active">Home</a>
+            <a href="pillars.html" class="mobile-nav-link">Challenge Areas</a>
+            <a href="residential.html" class="mobile-nav-link">Residential</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>My <span class="highlight">Gaisce</span> Gold Award Journey</h1>
+            <p>A transformative experience through community service, skill development, recreation, adventure, and residential challenges that shaped my personal growth and contribution to society.</p>
+            <div class="btn-group">
+                <a href="pillars.html" class="btn btn-primary">Explore Challenge Areas</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>About the Gaisce Gold Award</h2>
+                <p>The Gaisce Gold Award is Ireland's National Challenge Award, encouraging young people to dream big and realise their potential through personal development and community contribution.</p>
+            </div>
+            <div class="card-grid">
+                <!-- Skill Challenge -->
+                <div class="card card-indigo">
+                    <div class="card-icon indigo">
+                        <svg viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3>Skill Challenge</h3>
+                    <p>Developing a practical skill over a sustained period to enhance personal abilities.</p>
+                </div>
+
+                <!-- Recreation Challenge -->
+                <div class="card card-teal">
+                    <div class="card-icon teal">
+                        <svg viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1a4 4 0 014 4v2a4 4 0 11-8 0v-2a4 4 0 014-4h1m2-6 .707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM17 7l.707.707A1 1 0 0116.293 9.12l-.707-.707A1 1 0 0117 7z"></path>
+                        </svg>
+                    </div>
+                    <h3>Recreation Challenge</h3>
+                    <p>Engaging in physical recreation to improve health, fitness and personal wellbeing.</p>
+                </div>
+
+                <!-- Community Challenge -->
+                <div class="card card-orange">
+                    <div class="card-icon orange">
+                        <svg viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Community Challenge</h3>
+                    <p>Making a meaningful contribution to the community through voluntary service.</p>
+                </div>
+
+                <!-- Adventure Challenge -->
+                <div class="card card-purple">
+                    <div class="card-icon purple">
+                        <svg viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Adventure Challenge</h3>
+                    <p>Undertaking an adventurous journey that challenges personal limits and builds resilience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>I'd love to share more about my Gaisce journey and experiences. Feel free to reach out!</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" rows="4" class="form-input form-textarea"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Gaisce Gold Award Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

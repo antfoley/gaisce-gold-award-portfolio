@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Project - Gaisce Gold Award Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'indigo': {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        },
+                        'teal': {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                        },
+                        'orange': {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        },
+                        'purple': {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7c3aed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-indigo-600">Gaisce Gold Award</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 px-3 py-2 rounded-lg text-sm font-medium transition-colors">Home</a>
+                        <a href="pillars.html" class="text-gray-700 hover:bg-teal-50 hover:text-teal-600 px-3 py-2 rounded-lg text-sm font-medium transition-colors">Challenge Areas</a>
+                        <a href="residential.html" class="bg-orange-500 text-white px-3 py-2 rounded-lg text-sm font-medium">Residential</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-indigo-600 focus:outline-none focus:text-indigo-600" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="index.html" class="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 block px-3 py-2 rounded-lg text-base font-medium">Home</a>
+                <a href="pillars.html" class="text-gray-700 hover:bg-teal-50 hover:text-teal-600 block px-3 py-2 rounded-lg text-base font-medium">Challenge Areas</a>
+                <a href="residential.html" class="bg-orange-500 text-white block px-3 py-2 rounded-lg text-base font-medium">Residential</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 bg-gradient-to-br from-orange-50 via-white to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <span class="text-orange-600">Residential</span> Project
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    A transformative 5-day residential experience focused on environmental conservation and community building, bringing together young people from diverse backgrounds.
+                </p>
+                <div class="inline-flex items-center bg-white px-6 py-3 rounded-full shadow-lg">
+                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span class="text-gray-700 font-medium">Killarney National Park, Co. Kerry</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Duration -->
+                <div class="bg-orange-50 p-6 rounded-xl border border-orange-100 text-center">
+                    <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-orange-700 mb-2">Duration</h3>
+                    <p class="text-gray-600">5 days, 4 nights</p>
+                </div>
+
+                <!-- Participants -->
+                <div class="bg-purple-50 p-6 rounded-xl border border-purple-100 text-center">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-purple-700 mb-2">Group Size</h3>
+                    <p class="text-gray-600">24 participants from across Ireland</p>
+                </div>
+
+                <!-- Focus -->
+                <div class="bg-teal-50 p-6 rounded-xl border border-teal-100 text-center">
+                    <div class="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9V3m0 0a9 9 0 019 9M12 3a9 9 0 00-9 9"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-teal-700 mb-2">Focus Theme</h3>
+                    <p class="text-gray-600">Environmental Conservation & Sustainability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Project Experience</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Our residential project brought together 24 young adults for an intensive week of environmental conservation work, team building, and personal development in one of Ireland's most beautiful national parks.
+                </p>
+            </div>
+
+            <!-- Daily Activities -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+                <!-- Day 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        <h3 class="font-semibold text-indigo-700">Day 1</h3>
+                        <p class="text-sm text-gray-500">Arrival & Orientation</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Team introductions</li>
+                        <li>• Site orientation</li>
+                        <li>• Safety briefing</li>
+                        <li>• Goal setting workshop</li>
+                    </ul>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-white font-bold">2</span>
+                        </div>
+                        <h3 class="font-semibold text-teal-700">Day 2</h3>
+                        <p class="text-sm text-gray-500">Conservation Work</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Trail restoration</li>
+                        <li>• Invasive species removal</li>
+                        <li>• Habitat monitoring</li>
+                        <li>• Data collection</li>
+                    </ul>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-white font-bold">3</span>
+                        </div>
+                        <h3 class="font-semibold text-orange-700">Day 3</h3>
+                        <p class="text-sm text-gray-500">Community Building</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Team challenges</li>
+                        <li>• Environmental education</li>
+                        <li>• Group discussions</li>
+                        <li>• Cultural exchange</li>
+                    </ul>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-white font-bold">4</span>
+                        </div>
+                        <h3 class="font-semibold text-purple-700">Day 4</h3>
+                        <p class="text-sm text-gray-500">Leadership Skills</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Leadership workshops</li>
+                        <li>• Project planning</li>
+                        <li>• Presentation skills</li>
+                        <li>• Reflection sessions</li>
+                    </ul>
+                </div>
+
+                <!-- Day 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-white font-bold">5</span>
+                        </div>
+                        <h3 class="font-semibold text-indigo-700">Day 5</h3>
+                        <p class="text-sm text-gray-500">Celebration & Departure</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Project presentations</li>
+                        <li>• Achievement ceremony</li>
+                        <li>• Future planning</li>
+                        <li>• Farewell & networking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Activities -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Key Activities & Achievements</h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Environmental Conservation -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-teal-700">Environmental Conservation</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-teal-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-teal-800 mb-2">Trail Restoration Project</h4>
+                            <p class="text-gray-600">Repaired and maintained 2km of walking trails, including erosion control and path stabilization to protect the natural landscape.</p>
+                        </div>
+                        <div class="bg-teal-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-teal-800 mb-2">Invasive Species Management</h4>
+                            <p class="text-gray-600">Removed over 500 invasive rhododendron plants to protect native Irish flora and restore natural habitats.</p>
+                        </div>
+                        <div class="bg-teal-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-teal-800 mb-2">Wildlife Monitoring</h4>
+                            <p class="text-gray-600">Participated in red deer population surveys and bird watching programs to support ongoing conservation research.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Development -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-orange-700">Personal Development</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-orange-800 mb-2">Leadership Skills</h4>
+                            <p class="text-gray-600">Led a team of 6 participants in the trail restoration project, developing delegation and project management skills.</p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-orange-800 mb-2">Cultural Awareness</h4>
+                            <p class="text-gray-600">Worked alongside participants from diverse backgrounds, enhancing cultural understanding and communication skills.</p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-orange-800 mb-2">Problem Solving</h4>
+                            <p class="text-gray-600">Developed creative solutions to environmental challenges and group dynamics, improving adaptability and critical thinking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact & Reflection -->
+    <section class="py-16 bg-gradient-to-r from-purple-600 to-indigo-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h2 class="text-3xl font-bold mb-8">Impact & Reflection</h2>
+                <div class="max-w-4xl mx-auto">
+                    <blockquote class="text-xl italic mb-8">
+                        "The residential project was a transformative experience that showed me the power of collective action and the importance of environmental stewardship. Working alongside passionate young people from across Ireland gave me a deeper understanding of our shared responsibility to protect our natural heritage."
+                    </blockquote>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mt-12">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">2km</div>
+                            <p class="text-purple-100">of trails restored</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">500+</div>
+                            <p class="text-purple-100">invasive plants removed</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2">24</div>
+                            <p class="text-purple-100">lifelong connections made</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Learnings -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Key Learnings</h2>
+                <p class="text-lg text-gray-600">The residential experience provided valuable insights that continue to influence my approach to life and work.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Teamwork</h3>
+                    <p class="text-gray-600">Learning to work effectively with diverse teams and leverage different strengths toward common goals.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9V3m0 0a9 9 0 019 9M12 3a9 9 0 00-9 9"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Environmental Awareness</h3>
+                    <p class="text-gray-600">Developing a deeper understanding of environmental issues and sustainable practices.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Leadership</h3>
+                    <p class="text-gray-600">Building confidence in leading teams and taking initiative in challenging situations.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Resilience</h3>
+                    <p class="text-gray-600">Learning to adapt to new environments and overcome physical and emotional challenges.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Communication</h3>
+                    <p class="text-gray-600">Improving interpersonal skills and learning to communicate effectively across cultural differences.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Personal Growth</h3>
+                    <p class="text-gray-600">Gaining greater self-awareness and confidence through stepping outside my comfort zone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-orange-600 to-purple-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Explore My Complete Journey</h2>
+            <p class="text-xl text-orange-100 mb-8">
+                Discover how each component of my Gaisce Gold Award experience contributed to my personal development.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="pillars.html" class="bg-white hover:bg-gray-100 text-orange-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Challenge Areas
+                </a>
+                <a href="index.html#contact" class="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-600">© 2024 Gaisce Gold Award Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
