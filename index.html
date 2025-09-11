@@ -1,143 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaisce Gold Award Portfolio - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Rover Scout Chief Scout Award Portfolio - Home</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Inter font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+            .scroll-top-button {
+                transition: opacity 0.3s ease;
+            }
+        </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div>
-                <h1 class="nav-brand">Gaisce Gold Award</h1>
-            </div>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link active indigo">Home</a>
-                <a href="pillars.html" class="nav-link">Challenge Areas</a>
-                <a href="residential.html" class="nav-link">Residential</a>
-            </div>
-            <button class="mobile-menu-btn" id="mobile-menu-button">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+<body class="bg-gray-100 text-gray-800 leading-relaxed">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gray-900">My Rover Scout Chief Scout Award</h1>
+            <nav>
+                <ul class="flex space-x-4 font-medium">
+                    <li><a href="index.html" class="text-indigo-600 font-bold hover:text-indigo-600 transition-colors duration-300">Home</a></li>
+                    <li><a href="skill.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Skill</a></li>
+                    <li><a href="physical.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Physical</a></li>
+                    <li><a href="community,html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300"></a>Community</li>
+                    <li><a href="environment.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Environment</a></li>
+                    <li><a href="expedition.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Expedition</a></li>
+                    <li><a href="residential.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Intercultural Residential</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="index.html" class="mobile-nav-link active indigo">Home</a>
-            <a href="pillars.html" class="mobile-nav-link">Challenge Areas</a>
-            <a href="residential.html" class="mobile-nav-link">Residential</a>
-        </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero gradient-indigo-teal">
-        <div class="container">
-            <h1>My <span class="highlight indigo">Gaisce</span> Gold Award Journey</h1>
-            <p>A transformative experience through community service, skill development, recreation, adventure, and residential challenges that shaped my personal growth and contribution to society.</p>
-            <div class="btn-group">
-                <a href="pillars.html" class="btn btn-primary indigo">Explore Challenge Areas</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- About/Hero Section -->
+        <section id="about" class="bg-indigo-600 text-white rounded-2xl p-8 shadow-lg text-center mb-12">
+            <div class="max-w-3xl mx-auto">
+                <img src="https://placehold.co/150x150/ffffff/5b21b6?text=Image" alt="Your Profile Photo" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white object-cover">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-2">My Gaisce Gold Award Journey</h2>
+                <p class="text-lg md:text-xl opacity-90 mb-4">A record of my achievements in the Gaisce - The President's Award programme.</p>
+                <p class="text-sm opacity-80">This portfolio documents my commitment, personal growth, and challenges faced on the journey to achieving the Gold Award. [Your Name Here]</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Overview Section -->
-    <section class="section white">
-        <div class="container">
-            <div class="section-header">
-                <h2>About the Gaisce Gold Award</h2>
-                <p>The Gaisce Gold Award is Ireland's National Challenge Award, encouraging young people to dream big and realise their potential through personal development and community contribution.</p>
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-900 text-white rounded-2xl p-8 shadow-lg text-center">
+            <h3 class="text-3xl font-bold mb-4">Connect with Me</h3>
+            <p class="text-lg opacity-80 mb-6">
+                Feel free to reach out to me about my Gaisce journey or for a reference!
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:your.email@example.com" class="bg-white text-gray-900 py-3 px-6 rounded-full font-semibold hover:bg-gray-200 transition-colors duration-300">Email Me</a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="bg-white text-gray-900 py-3 px-6 rounded-full font-semibold hover:bg-gray-200 transition-colors duration-300">LinkedIn</a>
             </div>
-            <div class="card-grid">
-                <!-- Skill Challenge -->
-                <div class="card indigo">
-                    <div class="card-icon indigo">
-                        <svg viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <h3>Skill Challenge</h3>
-                    <p>Developing a practical skill over a sustained period to enhance personal abilities.</p>
-                </div>
+        </section>
+    </main>
 
-                <!-- Recreation Challenge -->
-                <div class="card teal">
-                    <div class="card-icon teal">
-                        <svg viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1a4 4 0 014 4v2a4 4 0 11-8 0v-2a4 4 0 014-4h1m2-6 .707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM17 7l.707.707A1 1 0 0116.293 9.12l-.707-.707A1 1 0 0117 7z"></path>
-                        </svg>
-                    </div>
-                    <h3>Recreation Challenge</h3>
-                    <p>Engaging in physical recreation to improve health, fitness and personal wellbeing.</p>
-                </div>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 p-4 bg-indigo-600 text-white rounded-full shadow-lg opacity-0 scroll-top-button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
 
-                <!-- Community Challenge -->
-                <div class="card orange">
-                    <div class="card-icon orange">
-                        <svg viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    </div>
-                    <h3>Community Challenge</h3>
-                    <p>Making a meaningful contribution to the community through voluntary service.</p>
-                </div>
-
-                <!-- Adventure Challenge -->
-                <div class="card purple">
-                    <div class="card-icon purple">
-                        <svg viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                    </div>
-                    <h3>Adventure Challenge</h3>
-                    <p>Undertaking an adventurous journey that challenges personal limits and builds resilience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section gray">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>I'd love to share more about my Gaisce journey and experiences. Feel free to reach out!</p>
-            </div>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name" class="form-label">Your Name</label>
-                        <input type="text" id="name" class="form-input">
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" id="email" class="form-input">
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" rows="4" class="form-input form-textarea"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2024 Gaisce Gold Award Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Mobile Menu JavaScript -->
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('show');
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Show/hide scroll to top button
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.opacity = '1';
+                scrollToTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+                scrollToTopBtn.style.pointerEvents = 'none';
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>
