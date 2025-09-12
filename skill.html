@@ -29,6 +29,7 @@
                     <li><a href="index.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Home</a></li>
                     <li><a href="skill.html" class="text-indigo-600 font-bold hover:text-indigo-600 transition-colors duration-300">Skill</a></li>
                     <li><a href="physical.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Physical</a></li>
+                    <li><a href="community.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Community</a></li>
                     <li><a href="environment.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Environment</a></li>
                     <li><a href="expedition.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Expedition</a></li>
                     <li><a href="residential.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Intercultural Residential</a></li>
@@ -46,13 +47,63 @@
             navMenu.classList.toggle('hidden');
         });
     </script>
+ <!-- Hero Section -->
+ <section id="hero" class="bg-indigo-600 text-white rounded-2xl p-8 shadow-lg text-center mb-12">
+    <div class="container mx-auto">
+        <div class="flex items-center justify-center space-x-4">
+            <!-- Fleur-de-lis Icon -->
+            <img src="assests/plane.png" 
+                 alt="Fleur-de-lis" 
+                 width="64" height="64">
 
-    <!-- Hero Section -->
-    <section id="hero" class="bg-indigo-600 text-white rounded-2xl p-8 shadow-lg text-center mb-12">
-        <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-2">Skill</h2>
-            <p class="text-lg md:text-xl opacity-90 mb-4">Developing a new skill to enhance my personal growth and creativity.</p>
+            <!-- Heading -->
+            <h2 class="text-4xl md:text-5xl font-extrabold">Skill</h2>
         </div>
-    </section>
+        <p class="text-lg md:text-xl opacity-90 mb-4">
+            Developing confidence and discipline by embracing the challenge of flight training, pushing myself to new heights with every lesson.
+        </p>
+    </div>
+  </section>
+
+  <!-- Log Entry 1 -->
+  <section id="log-entry" class="container mx-auto mb-12">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
+      <!-- Text Content -->
+      <div class="p-6 lg:w-2/3">
+        <p class="text-sm text-gray-500 mb-2">Date: October 5, 2023</p>
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">First Flight Lesson</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Today marked my very first experience in the cockpit of a training aircraft. I learned the basics of pre-flight checks, safety procedures, and how to handle the controls during takeoff. Sitting at the controls for the first time was both exciting and challenging, and I felt an enormous sense of responsibility as I began my journey into aviation.
+        </p>
+      </div>
+      <!-- Polaroid Image -->
+      <div class="relative lg:w-1/3 p-6 flex justify-center">
+        <div class="bg-white shadow-md rounded-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
+          <img src="first-flight.jpg" alt="First Flight Lesson" class="rounded-lg">
+          <p class="text-center text-sm text-gray-500 mt-2">My first time at the controls</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Log Entry 2 -->
+  <section id="log-entry-2" class="container mx-auto mb-12">
+    <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
+      <!-- Text Content -->
+      <div class="p-6 lg:w-2/3">
+        <p class="text-sm text-gray-500 mb-2">Date: October 12, 2023</p>
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Progress in the Air</h3>
+        <p class="text-gray-700 leading-relaxed">
+          A week into my training, I'm becoming much more confident with the fundamentals of flight. I can now taxi and take off with guidance, and I’ve started to practice gentle turns and level flight. Each lesson challenges me to focus, stay calm under pressure, and refine my coordination — skills that are already shaping me both as a pilot in training and as a person.
+        </p>
+      </div>
+      <!-- Polaroid Image -->
+      <div class="relative lg:w-1/3 p-6 flex justify-center">
+        <div class="bg-white shadow-md rounded-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+          <img src="progress-flight.jpg" alt="Progress in Flight Training" class="rounded-lg">
+          <p class="text-center text-sm text-gray-500 mt-2">Taking control mid-flight</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
-</html>
