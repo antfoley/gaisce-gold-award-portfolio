@@ -17,11 +17,19 @@
     <header class="bg-white shadow-sm p-4 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-xl font-bold text-gray-900">My Rover Scout Chief Scout Award</h1>
-            <nav>
-                <ul class="flex space-x-4 font-medium">
+            <!-- Hamburger Button -->
+            <button id="menu-toggle" class="lg:hidden text-gray-600 hover:text-indigo-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <!-- Navigation Menu -->
+            <nav id="nav-menu" class="hidden lg:flex flex-col lg:flex-row lg:space-x-4 font-medium">
+                <ul class="flex flex-col lg:flex-row lg:space-x-4">
                     <li><a href="index.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Home</a></li>
                     <li><a href="skill.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Skill</a></li>
                     <li><a href="physical.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Physical</a></li>
+                    <li><a href="community.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Community</a></li>
                     <li><a href="environment.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Environment</a></li>
                     <li><a href="expedition.html" class="text-indigo-600 font-bold hover:text-indigo-600 transition-colors duration-300">Expedition</a></li>
                     <li><a href="residential.html" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Intercultural Residential</a></li>
@@ -29,6 +37,16 @@
             </nav>
         </div>
     </header>
+    
+    <script>
+        // JavaScript to toggle the menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
 
     <!-- Hero Section -->
     <section id="hero" class="bg-indigo-600 text-white rounded-2xl p-8 shadow-lg text-center mb-12">
