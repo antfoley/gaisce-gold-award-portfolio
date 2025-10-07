@@ -11,9 +11,60 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        
+        /* Disclaimer Modal Styles */
+        .disclaimer-modal {
+            backdrop-filter: blur(5px);
+        }
+        
+        .disclaimer-content {
+            animation: fadeInScale 0.3s ease-out;
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800 leading-relaxed">
+    <!-- Disclaimer Modal -->
+    <div id="disclaimerModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 disclaimer-modal">
+        <div class="disclaimer-content bg-white rounded-lg shadow-2xl max-w-md mx-4 p-6">
+            <div class="flex items-center mb-4">
+                <div class="flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <h3 class="text-lg font-semibold text-gray-900">Portfolio Disclaimer</h3>
+                </div>
+            </div>
+            
+            <div class="text-sm text-gray-600 mb-6">
+                <p class="mb-3">This section outlines community involvement as part of my Rover Chief Scout Award</p>
+                <p class="mb-3">The content reflects my individual journey and may include personal opinions and experiences with various Scout groups and activities.</p>
+                <p>All images and activities shown were conducted with the appropriate permissions and safety measures in place. Parents and guardians have also been informed regarding the use of photographs for this portfolio.</p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button id="acceptDisclaimer" class="flex-1 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-300 font-medium">
+                    I Understand
+                </button>
+                <button id="declineDisclaimer" class="flex-1 bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 transition-colors duration-300 font-medium">
+                    Go Back
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Include the same navigation bar -->
     <header class="bg-white shadow-sm p-4 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
@@ -40,6 +91,35 @@
     </header>
     
     <script>
+        // Disclaimer Modal Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const disclaimerModal = document.getElementById('disclaimerModal');
+            const acceptBtn = document.getElementById('acceptDisclaimer');
+            const declineBtn = document.getElementById('declineDisclaimer');
+            
+            // Version the disclaimer to show updated content
+            const disclaimerVersion = 'v2.0'; // Update this when disclaimer changes
+            const hasAccepted = localStorage.getItem('portfolioDisclaimerAccepted');
+            const acceptedVersion = localStorage.getItem('portfolioDisclaimerVersion');
+            
+            // Show disclaimer if never accepted or if version has changed
+            if (hasAccepted !== 'true' || acceptedVersion !== disclaimerVersion) {
+                disclaimerModal.style.display = 'flex';
+            } else {
+                disclaimerModal.style.display = 'none';
+            }
+            
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('portfolioDisclaimerAccepted', 'true');
+                localStorage.setItem('portfolioDisclaimerVersion', disclaimerVersion);
+                disclaimerModal.style.display = 'none';
+            });
+            
+            declineBtn.addEventListener('click', function() {
+                window.history.back();
+            });
+        });
+
         // JavaScript to toggle the menu
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
@@ -110,7 +190,7 @@
         <!-- <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden"> -->
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
-                <p class="text-sm text-gray-500 mb-2">Date: September 23, 2025</p>
+                <p class="text-sm text-gray-500 mb-2">Date: September 23th, 2025</p>
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Beavers Day 2</h3>
                 <h4 class="text-xl font-semibold text-gray-800 mb-2 italic">The Plan</h4>
                 <p class="text-gray-700 leading-relaxed mb-4">
@@ -183,6 +263,35 @@
                 <div class="bg-white shadow-md rounded-lg transform -rotate-6 hover:rotate-0 transition-transform duration-300">
                     <img src="assets/community/SideStroy1.jpg" alt="Side Story Image" class="rounded-lg w-64 mx-auto">
                     <p class="text-center text-sm text-gray-500 mt-2">List of prizes 💯</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="log-entry-2" class="container mx-auto mb-12">
+        <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
+            <!-- Text Content -->
+            <div class="p-6 lg:w-2/3">
+                <p class="text-sm text-gray-500 mb-2">Date: October 6th, 2025</p>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Beavers Day 4</h3>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 italic">The Plan</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    The plan was to do some cooking with the Beavers
+                </p>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 italic">The Do</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    We started the night with a fire and talked about fire safety. After that, we cut open a few oranges and cracked some eggs. The good ol egg in an orange. We then had a few games and called it a night.
+                </p>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 italic">The Review</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    This could of gone a bit better with a simple thing of starting the fire a bit earlier to get a better result on the eggs. But other than that it was a great night.
+                </p>
+            </div>
+            <!-- Polaroid Image -->
+            <div class="relative lg:w-1/3 p-6 flex justify-center">
+                <div class="bg-white shadow-md rounded-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300 max-w-xs">
+                    <img src="assets/community/BeaversDay4.jpg" alt="Another Community Project" class="rounded-lg w-1/2 mx-auto">
+                    <p class="text-center text-sm text-gray-500 mt-2">Another Fire lit by me 🤪🔥</p>
                 </div>
             </div>
         </div>
