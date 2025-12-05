@@ -85,12 +85,15 @@
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Day 1: BJJ</h3>
                 <h4 class="text-xl font-semibold text-gray-800 mb-2 italic">The Plan</h4>
                 <p class="text-gray-700 leading-relaxed mb-4">
+                    So the plan was to go to my first Brazilian Jiu-Jitsu class in over 4 years and get back into the swing of things. I was a bit nervous as I haven't done any martial arts in a while but I was excited to learn and improve my skills.
                 </p>
                 <h4 class="text-xl font-semibold text-gray-800 mb-2 italic">The Do</h4>
                 <p class="text-gray-700 leading-relaxed mb-4">
+                    The class started with a warm-up, which included pushups, jumping jacks, and stretching. After that we moved on to drilling techniques such as shrimping, butt scoots, rolls, and technical stand-ups. Take down and submissions were also practiced. Finished with a few sparring rounds to apply what we learned.
                 </p>
                 <h4 class="text-xl font-semibold text-gray-800 mb-2 italic">The Review</h4>
                 <p class="text-gray-700 leading-relaxed">
+                    I found the class to be quite challenging but also very rewarding. I was able to pick up on the techniques quickly and felt a sense of accomplishment after the class.
                 </p>
             </div>            
             <!-- Polaroid Image -->
@@ -109,6 +112,11 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
     </button>
+
+     <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+        <img id="modalImg" src="" alt="Full Size" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
+    </div>
 
     <script>
         // Smooth scroll for internal links
@@ -140,6 +148,21 @@
                 behavior: 'smooth'
             });
         });
+
+        // Image modal logic
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('click', function () {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            modalImg.src = this.src;
+            modal.classList.remove('hidden');
+        });
+    });
+
+    document.getElementById('imageModal').addEventListener('click', function () {
+        this.classList.add('hidden');
+        document.getElementById('modalImg').src = '';
+    });
     </script>
 </body>
 </html>
