@@ -91,6 +91,24 @@
     </header>
     
     <script>
+        function scrollToHashTarget() {
+            if (!window.location.hash) {
+                return;
+            }
+
+            const target = document.querySelector(window.location.hash);
+            if (!target) {
+                return;
+            }
+
+            const header = document.querySelector('header');
+            const offset = header ? header.offsetHeight + 12 : 0;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }
+
+        window.addEventListener('hashchange', scrollToHashTarget);
+
         // Disclaimer Modal Logic
         document.addEventListener('DOMContentLoaded', function() {
             const disclaimerModal = document.getElementById('disclaimerModal');
@@ -113,6 +131,7 @@
                 localStorage.setItem('portfolioDisclaimerAccepted', 'true');
                 localStorage.setItem('portfolioDisclaimerVersion', disclaimerVersion);
                 disclaimerModal.style.display = 'none';
+                setTimeout(scrollToHashTarget, 80);
             });
             
             declineBtn.addEventListener('click', function() {
@@ -156,7 +175,7 @@
         </a>
     </section>
 
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-1" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -185,7 +204,7 @@
         </div>
     </section>
 
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-2" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
         <!-- <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden"> -->
             <!-- Text Content -->
@@ -216,7 +235,7 @@
         </div>
     </section>
 
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-3" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -249,7 +268,7 @@
     </section>
 
     <!-- Side Story Section -->
-    <section id="side-story" class="container mx-auto mb-12">
+    <section id="community-side-story-1" class="container mx-auto mb-12">
         <div class="bg-white shadow-lg rounded-lg p-8 flex flex-col md:flex-row items-center">
             <!-- Text Content -->
             <div class="md:w-2/3">
@@ -268,7 +287,7 @@
         </div>
     </section>
 
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-4" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -298,7 +317,7 @@
     </section>
 
     <!-- Side Story Section -->
-    <section id="side-story" class="container mx-auto mb-12">
+    <section id="community-side-story-2" class="container mx-auto mb-12">
         <div class="bg-white shadow-lg rounded-lg p-8 flex flex-col md:flex-row items-center">
             <!-- Text Content -->
             <div class="md:w-2/3">
@@ -317,7 +336,7 @@
         </div>
     </section>
 
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-5" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -339,7 +358,7 @@
         </div>
     </section>
     
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-6" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -368,7 +387,7 @@
         </div>
     </section>
 
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-7" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -390,7 +409,7 @@
         </div>
     </section>
 
-     <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-8" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -420,7 +439,7 @@
         </div>
     </section>
 
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-9" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -443,7 +462,7 @@
     </section>
 
      
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-10" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -472,7 +491,7 @@
         </div>
     </section>
 
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-11" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -494,7 +513,7 @@
         </div>
     </section>
    
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-12" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -522,7 +541,7 @@
         </div>
     </section>
 
-     <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-13" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -554,7 +573,7 @@
     </section>
 
     
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-14" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -576,7 +595,7 @@
         </div>
     </section>
 
-     <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-15" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -606,7 +625,7 @@
         </div>
     </section>
 
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-16" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -628,7 +647,7 @@
         </div>
     </section>
 
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-17" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -660,7 +679,7 @@
     </section>
 
     
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-18" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -683,7 +702,7 @@
     </section>
 
 
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-19" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -714,7 +733,7 @@
         </div>
     </section>
 
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-20" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -742,7 +761,7 @@
         </div>
     </section>
 
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-21" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -764,7 +783,7 @@
         </div>
     </section>
     
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-22" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -786,7 +805,7 @@
         </div>
     </section>
 
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-23" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -815,7 +834,7 @@
     </section>
 
        
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-24" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -851,7 +870,7 @@
         </div>
     </section>
 
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-25" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -873,7 +892,7 @@
         </div>
     </section>
 
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-26" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -901,7 +920,7 @@
         </div>
     </section>
 
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-27" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -923,7 +942,7 @@
         </div>
     </section>
 
-    <section id="side-story" class="container mx-auto mb-12">
+    <section id="community-side-story-3" class="container mx-auto mb-12">
         <div class="bg-white shadow-lg rounded-lg p-8 flex flex-col md:flex-row items-center">
             <!-- Text Content -->
             <div class="md:w-2/3">
@@ -935,7 +954,7 @@
         </div>
     </section>
 
-    <section id="log-entry-2" class="container mx-auto mb-12">
+    <section id="community-day-28" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -957,7 +976,7 @@
         </div>
     </section>
 
-    <section id="log-entry" class="container mx-auto mb-12">
+    <section id="community-day-29" class="container mx-auto mb-12">
         <div class="flex flex-col lg:flex-row items-center lg:items-start bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Text Content -->
             <div class="p-6 lg:w-2/3">
@@ -1071,6 +1090,8 @@
             this.classList.add('hidden');
             document.getElementById('modalImg').src = '';
         });
+
+        setTimeout(scrollToHashTarget, 80);
     </script>
 </body>
 </html>

@@ -58,7 +58,7 @@
     </section>
     
     <!-- Day 1 -->
-    <section id="day-1" class="container mx-auto mb-12 p-6 bg-white shadow-lg rounded-lg">
+    <section id="expedition-day-1" class="container mx-auto mb-12 p-6 bg-white shadow-lg rounded-lg">
         <h3 class="text-2xl font-bold text-gray-800 mb-6">Day 1</h3>
     
         <h4 class="text-lg font-semibold text-gray-800 mb-2 italic">Written Log</h4>
@@ -90,7 +90,7 @@
     </section>
     
     <!-- Day 2 -->
-    <section id="day-2" class="container mx-auto mb-12 p-6 bg-white shadow-lg rounded-lg">
+    <section id="expedition-day-2" class="container mx-auto mb-12 p-6 bg-white shadow-lg rounded-lg">
         <h3 class="text-2xl font-bold text-gray-800 mb-6">Day 2</h3>
         <!-- Repeat subsections as in Day 1 -->
         <h4 class="text-lg font-semibold text-gray-800 mb-2 italic">Written Log</h4>
@@ -122,7 +122,7 @@
     </section>
     
     <!-- Repeat for Day 3 -->
-    <section id="day-3" class="container mx-auto mb-12 p-6 bg-white shadow-lg rounded-lg">
+    <section id="expedition-day-3" class="container mx-auto mb-12 p-6 bg-white shadow-lg rounded-lg">
         <h3 class="text-2xl font-bold text-gray-800 mb-6">Day 3</h3>
         <h4 class="text-lg font-semibold text-gray-800 mb-2 italic">Written Log</h4>
         <p class="text-gray-700 leading-relaxed mb-4">[Describe the day’s journey, challenges, highlights, weather, teamwork, etc.]</p>
@@ -153,7 +153,7 @@
     </section>
     
     <!-- Repeat for Day 4 -->
-    <section id="day-4" class="container mx-auto mb-12 p-6 bg-white shadow-lg rounded-lg">
+    <section id="expedition-day-4" class="container mx-auto mb-12 p-6 bg-white shadow-lg rounded-lg">
         <h3 class="text-2xl font-bold text-gray-800 mb-6">Day 4</h3>
         <h4 class="text-lg font-semibold text-gray-800 mb-2 italic">Written Log</h4>
         <p class="text-gray-700 leading-relaxed mb-4">[Describe the day’s journey, challenges, highlights, weather, teamwork, etc.]</p>
@@ -184,7 +184,7 @@
     </section>
     
     <!-- Reflection Section -->
-    <section id="reflection" class="container mx-auto mb-12 p-6 bg-white shadow-lg rounded-lg">
+    <section id="expedition-day-5" class="container mx-auto mb-12 p-6 bg-white shadow-lg rounded-lg">
         <h3 class="text-2xl font-bold text-gray-800 mb-6">Reflection</h3>
         <p class="text-gray-700 leading-relaxed">
             The expedition was a transformative experience, teaching us the value of resilience, collaboration, and adaptability. It was an opportunity to push our limits, learn from challenges, and celebrate our achievements as a team.
@@ -199,6 +199,24 @@
     </button>
 
     <script>
+        function scrollToHashTarget() {
+            if (!window.location.hash) {
+                return;
+            }
+
+            const target = document.querySelector(window.location.hash);
+            if (!target) {
+                return;
+            }
+
+            const header = document.querySelector('header');
+            const offset = header ? header.offsetHeight + 12 : 0;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }
+
+        window.addEventListener('hashchange', scrollToHashTarget);
+
         // Smooth scroll for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -228,6 +246,8 @@
                 behavior: 'smooth'
             });
         });
+
+        setTimeout(scrollToHashTarget, 80);
     </script>
 </body>
 </html>
