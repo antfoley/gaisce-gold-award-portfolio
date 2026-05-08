@@ -70,19 +70,8 @@
       {"date":"2026-04-24","title":"Day 18: Clouds"},
       {"date":"2026-05-05","title":"Day 19: Visibility"}
     ],
-    "environment": [
-      {"date":"2026-01-14","title":"Day 1: Environment Entry"},
-      {"date":"2026-02-11","title":"Day 2: Environment Entry"},
-      {"date":"2026-03-11","title":"Day 3: Environment Entry"},
-      {"date":"2026-04-15","title":"Day 4: Environment Entry"},
-      {"date":"2026-05-06","title":"Day 5: Environment Entry"}
-    ],
-    "expedition": [
-      {"date":"2026-07-10","title":"Day 1: Expedition Journey"},
-      {"date":"2026-07-11","title":"Day 2: Expedition Journey"},
-      {"date":"2026-07-12","title":"Day 3: Expedition Journey"},
-      {"date":"2026-07-13","title":"Day 4: Expedition Journey"},
-      {"date":"2026-07-13","title":"Day 5: Expedition Reflection"}
-    ]
+    "environment": [],
+    "expedition": [],
+    "residential": []
   }
 }
