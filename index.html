@@ -137,85 +137,62 @@
     </button>
 
     <script>
-        const trackerEntries = [
-            { date: '2025-09-15', title: 'Day 1: Beavers - Campfire', category: 'community', page: 'community.html', anchor: '#community-day-1' },
-            { date: '2025-09-23', title: 'Day 2: Beavers - Recycling Art', category: 'community', page: 'community.html', anchor: '#community-day-2' },
-            { date: '2025-09-29', title: 'Day 3: Beavers - Autumn Display', category: 'community', page: 'community.html', anchor: '#community-day-3' },
-            { date: '2025-10-06', title: 'Day 4: Beavers - Cooking Night', category: 'community', page: 'community.html', anchor: '#community-day-4' },
-            { date: '2025-10-17', title: 'Day 5: Ventures - Planning', category: 'community', page: 'community.html', anchor: '#community-day-5' },
-            { date: '2025-10-20', title: 'Day 6: Beavers - Halloween Party', category: 'community', page: 'community.html', anchor: '#community-day-6' },
-            { date: '2025-11-03', title: 'Day 7: Beavers - Pioneering', category: 'community', page: 'community.html', anchor: '#community-day-7' },
-            { date: '2025-11-10', title: 'Day 8: Beavers - Pioneering Continued', category: 'community', page: 'community.html', anchor: '#community-day-8' },
-            { date: '2025-11-17', title: 'Day 9: Beavers - Shackleton Quiz', category: 'community', page: 'community.html', anchor: '#community-day-9' },
-            { date: '2025-11-24', title: 'Day 10: Beavers - Christmas Cards', category: 'community', page: 'community.html', anchor: '#community-day-10' },
-            { date: '2025-12-01', title: 'Day 11: Beavers - Investiture Prep', category: 'community', page: 'community.html', anchor: '#community-day-11' },
-            { date: '2025-12-08', title: 'Day 12: Beavers - Lodge Posters', category: 'community', page: 'community.html', anchor: '#community-day-12' },
-            { date: '2025-12-15', title: 'Day 13: Beavers - Investiture', category: 'community', page: 'community.html', anchor: '#community-day-13' },
-            { date: '2026-01-12', title: 'Day 14: Beavers - Air Activities', category: 'community', page: 'community.html', anchor: '#community-day-14' },
-            { date: '2026-01-19', title: 'Day 15: Beavers - Air Discussion', category: 'community', page: 'community.html', anchor: '#community-day-15' },
-            { date: '2026-01-27', title: 'Day 16: Beavers - Parachutes', category: 'community', page: 'community.html', anchor: '#community-day-16' },
-            { date: '2026-02-06', title: 'Day 17: Ventures - Planning Night', category: 'community', page: 'community.html', anchor: '#community-day-17' },
-            { date: '2026-02-09', title: 'Day 18: Beavers - Backwoods Demo', category: 'community', page: 'community.html', anchor: '#community-day-18' },
-            { date: '2026-02-16', title: 'Day 19: Beavers - Pancake Night', category: 'community', page: 'community.html', anchor: '#community-day-19' },
-            { date: '2026-02-23', title: 'Day 20: Beavers - CSA Night', category: 'community', page: 'community.html', anchor: '#community-day-20' },
-            { date: '2026-03-02', title: 'Day 21: Beavers - Town Walk', category: 'community', page: 'community.html', anchor: '#community-day-21' },
-            { date: '2026-03-09', title: 'Day 22: Beavers - Map Making', category: 'community', page: 'community.html', anchor: '#community-day-22' },
-            { date: '2026-03-17', title: 'Day 23: Beavers - Parade', category: 'community', page: 'community.html', anchor: '#community-day-23' },
-            { date: '2026-03-29', title: 'Day 24: Ventures - Scout Show', category: 'community', page: 'community.html', anchor: '#community-day-24' },
-            { date: '2026-03-30', title: 'Day 25: Beavers - Easter Party', category: 'community', page: 'community.html', anchor: '#community-day-25' },
-            { date: '2026-04-08', title: 'Day 26: Ventures - Glendalough Hike', category: 'community', page: 'community.html', anchor: '#community-day-26' },
-            { date: '2026-04-13', title: 'Day 27: Beavers - DIL Crafts Start', category: 'community', page: 'community.html', anchor: '#community-day-27' },
-            { date: '2026-04-20', title: 'Day 28: Beavers - DIL Painting', category: 'community', page: 'community.html', anchor: '#community-day-28' },
-            { date: '2026-04-27', title: 'Day 29: Beavers - DIL Crafts Finish', category: 'community', page: 'community.html', anchor: '#community-day-29' },
+        let trackerEntries = [];
 
-            { date: '2025-12-04', title: 'Day 1: BJJ - Return Session', category: 'physical', page: 'physical.html', anchor: '#physical-day-1' },
-            { date: '2025-12-11', title: 'Day 2: BJJ - Takedowns', category: 'physical', page: 'physical.html', anchor: '#physical-day-2' },
-            { date: '2025-12-18', title: 'Day 3: BJJ - Guard Retention', category: 'physical', page: 'physical.html', anchor: '#physical-day-3' },
-            { date: '2026-01-08', title: 'Day 4: BJJ - Escapes', category: 'physical', page: 'physical.html', anchor: '#physical-day-4' },
-            { date: '2026-01-15', title: 'Day 5: BJJ - Triangle & Base', category: 'physical', page: 'physical.html', anchor: '#physical-day-5' },
-            { date: '2026-01-08', title: 'Day 6: BJJ - Throws & Submissions', category: 'physical', page: 'physical.html', anchor: '#physical-day-6' },
-            { date: '2026-02-05', title: 'Day 7: BJJ - Half Guard', category: 'physical', page: 'physical.html', anchor: '#physical-day-7' },
-            { date: '2026-02-12', title: 'Day 8: BJJ - Advanced Sparring', category: 'physical', page: 'physical.html', anchor: '#physical-day-8' },
-            { date: '2026-03-05', title: 'Day 9: BJJ - Sweep & Passing', category: 'physical', page: 'physical.html', anchor: '#physical-day-9' },
-            { date: '2026-03-26', title: 'Day 10: BJJ - Butterfly Guard', category: 'physical', page: 'physical.html', anchor: '#physical-day-10' },
-            { date: '2026-04-09', title: 'Day 11: BJJ - Side Control', category: 'physical', page: 'physical.html', anchor: '#physical-day-11' },
-            { date: '2026-04-16', title: 'Day 12: BJJ - Positional Sparring', category: 'physical', page: 'physical.html', anchor: '#physical-day-12' },
-            { date: '2026-04-23', title: 'Day 13: BJJ - Kesa-Gatame', category: 'physical', page: 'physical.html', anchor: '#physical-day-13' },
-            { date: '2026-04-30', title: 'Day 14: BJJ - Competition Class', category: 'physical', page: 'physical.html', anchor: '#physical-day-14' },
-            { date: '2026-05-07', title: 'Day 15: BJJ - Russian Ties', category: 'physical', page: 'physical.html', anchor: '#physical-day-15' },
+        const trackerCategoryPages = {
+            community: 'community.html',
+            physical: 'physical.html',
+            skill: 'skill.html',
+            environment: 'environment.html',
+            expedition: 'expedition.html'
+        };
 
-            { date: '2025-08-16', title: 'Day 1: First Flight Lesson', category: 'skill', page: 'skill.html', anchor: '#skill-day-1' },
-            { date: '2025-10-03', title: 'Day 2: Flight Centre Tour', category: 'skill', page: 'skill.html', anchor: '#skill-day-2' },
-            { date: '2025-11-05', title: 'Day 3: Online Learning', category: 'skill', page: 'skill.html', anchor: '#skill-day-3' },
-            { date: '2025-11-11', title: 'Day 4: Online Learning', category: 'skill', page: 'skill.html', anchor: '#skill-day-4' },
-            { date: '2025-11-15', title: 'Day 5: In-Person Briefing', category: 'skill', page: 'skill.html', anchor: '#skill-day-5' },
-            { date: '2025-11-26', title: 'Day 6: Online Learning', category: 'skill', page: 'skill.html', anchor: '#skill-day-6' },
-            { date: '2025-12-02', title: 'Day 7: Navigation Module', category: 'skill', page: 'skill.html', anchor: '#skill-day-7' },
-            { date: '2025-11-12', title: 'Day 8: Air Law Module', category: 'skill', page: 'skill.html', anchor: '#skill-day-8' },
-            { date: '2026-01-16', title: 'Day 9: Air Law Continuation', category: 'skill', page: 'skill.html', anchor: '#skill-day-9' },
-            { date: '2026-01-29', title: 'Day 10: VFR / IFR Procedures', category: 'skill', page: 'skill.html', anchor: '#skill-day-10' },
-            { date: '2026-02-10', title: 'Day 11: Licenses and Ratings', category: 'skill', page: 'skill.html', anchor: '#skill-day-11' },
-            { date: '2026-02-16', title: 'Day 12: Transponders', category: 'skill', page: 'skill.html', anchor: '#skill-day-12' },
-            { date: '2026-02-25', title: 'Day 13: Air Law Completion', category: 'skill', page: 'skill.html', anchor: '#skill-day-13' },
-            { date: '2026-03-04', title: 'Day 14: Meteorology Start', category: 'skill', page: 'skill.html', anchor: '#skill-day-14' },
-            { date: '2026-03-24', title: 'Day 15: Earth Heating', category: 'skill', page: 'skill.html', anchor: '#skill-day-15' },
-            { date: '2026-04-09', title: 'Day 16: Wind', category: 'skill', page: 'skill.html', anchor: '#skill-day-16' },
-            { date: '2026-04-15', title: 'Day 17: Windshear & Turbulence', category: 'skill', page: 'skill.html', anchor: '#skill-day-17' },
-            { date: '2026-04-24', title: 'Day 18: Clouds', category: 'skill', page: 'skill.html', anchor: '#skill-day-18' },
-            { date: '2026-05-05', title: 'Day 19: Visibility', category: 'skill', page: 'skill.html', anchor: '#skill-day-19' },
+        function extractDayNumber(title) {
+            if (typeof title !== 'string') {
+                return null;
+            }
+            const match = title.match(/\bDay\s+(\d+)\b/i);
+            return match ? match[1] : null;
+        }
 
-            { date: '2026-01-14', title: 'Day 1: Environment Entry', category: 'environment', page: 'environment.html', anchor: '#environment-day-1' },
-            { date: '2026-02-11', title: 'Day 2: Environment Entry', category: 'environment', page: 'environment.html', anchor: '#environment-day-2' },
-            { date: '2026-03-11', title: 'Day 3: Environment Entry', category: 'environment', page: 'environment.html', anchor: '#environment-day-3' },
-            { date: '2026-04-15', title: 'Day 4: Environment Entry', category: 'environment', page: 'environment.html', anchor: '#environment-day-4' },
-            { date: '2026-05-06', title: 'Day 5: Environment Entry', category: 'environment', page: 'environment.html', anchor: '#environment-day-5' },
+        function inferEntryNavigation(category, title, index) {
+            const page = trackerCategoryPages[category] || (category + '.html');
+            const dayNumber = extractDayNumber(title);
+            const anchor = dayNumber ? ('#' + category + '-day-' + dayNumber) : ('#' + category + '-day-' + (index + 1));
+            return { page, anchor };
+        }
 
-            { date: '2026-07-10', title: 'Day 1: Expedition Journey', category: 'expedition', page: 'expedition.html', anchor: '#expedition-day-1' },
-            { date: '2026-07-11', title: 'Day 2: Expedition Journey', category: 'expedition', page: 'expedition.html', anchor: '#expedition-day-2' },
-            { date: '2026-07-12', title: 'Day 3: Expedition Journey', category: 'expedition', page: 'expedition.html', anchor: '#expedition-day-3' },
-            { date: '2026-07-13', title: 'Day 4: Expedition Journey', category: 'expedition', page: 'expedition.html', anchor: '#expedition-day-4' },
-            { date: '2026-07-13', title: 'Day 5: Expedition Reflection', category: 'expedition', page: 'expedition.html', anchor: '#expedition-day-5' }
-        ];
+        function normalizeTimelineData(rawData) {
+            const timeline = rawData && rawData.timeline ? rawData.timeline : {};
+            return Object.entries(timeline).flatMap(([category, entries]) => {
+                if (!Array.isArray(entries)) {
+                    return [];
+                }
+
+                return entries
+                    .filter(entry => entry && entry.date && entry.title)
+                    .map((entry, index) => {
+                        const inferredNavigation = inferEntryNavigation(category, entry.title, index);
+                        return {
+                        date: entry.date,
+                        title: entry.title,
+                        category,
+                        page: inferredNavigation.page,
+                        anchor: inferredNavigation.anchor
+                    };
+                });
+            });
+        }
+
+        async function loadTimelineEntries() {
+            const response = await fetch('assets/data/timeline.json', { cache: 'no-store' });
+            if (!response.ok) {
+                throw new Error('Unable to load timeline.json');
+            }
+
+            const rawData = await response.json();
+            return normalizeTimelineData(rawData);
+        }
 
         const trackerCategoryConfig = {
             community: { dot: 'bg-indigo-500', badge: 'bg-indigo-100 text-indigo-700', emoji: '🏘️', label: 'Community' },
@@ -235,8 +212,10 @@
                 button.classList.add('bg-gray-100', 'text-gray-700');
             });
             const selectedFilter = document.getElementById('filter-' + category);
-            selectedFilter.classList.remove('bg-gray-100', 'text-gray-700');
-            selectedFilter.classList.add('bg-gray-800', 'text-white');
+            if (selectedFilter) {
+                selectedFilter.classList.remove('bg-gray-100', 'text-gray-700');
+                selectedFilter.classList.add('bg-gray-800', 'text-white');
+            }
             renderTimelineEntries(category);
         }
 
@@ -307,7 +286,18 @@
             });
         });
 
-        renderTimelineEntries('all');
+        async function initializeTimeline() {
+            try {
+                trackerEntries = await loadTimelineEntries();
+            } catch (error) {
+                trackerEntries = [];
+                console.warn('Timeline data could not be loaded:', error);
+            }
+
+            filterTimelineEntries('all');
+        }
+
+        initializeTimeline();
     </script>
 </body>
 </html>
