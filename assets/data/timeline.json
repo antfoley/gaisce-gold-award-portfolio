@@ -30,7 +30,8 @@
       {"date":"2026-04-13","title":"Day 27: Beavers - DIL Crafts Start"},
       {"date":"2026-04-20","title":"Day 28: Beavers - DIL Painting"},
       {"date":"2026-04-27","title":"Day 29: Beavers - DIL Crafts Finish"},
-      {"date":"2026-05-08","title":"Day 30: Beavers and Ventures - DIL Decoration"}
+      {"date":"2026-05-08","title":"Day 30: Beavers and Ventures - DIL Decoration"},
+      {"date":"2026-05-11","title":"Day 31: Beavers - Ice cream to celebrate DIL"}
     ],
     "physical": [
       {"date":"2025-12-04","title":"Day 1: BJJ - Return Session"},
@@ -47,7 +48,8 @@
       {"date":"2026-04-16","title":"Day 12: BJJ - Positional Sparring"},
       {"date":"2026-04-23","title":"Day 13: BJJ - Kesa-Gatame"},
       {"date":"2026-04-30","title":"Day 14: BJJ - Competition Class"},
-      {"date":"2026-05-07","title":"Day 15: BJJ - Russian Ties"}
+      {"date":"2026-05-07","title":"Day 15: BJJ - Russian Ties"},
+      {"date":"2026-05-11","title":"Day 16: BJJ - Mount Escapes"}
     ],
     "skill": [
       {"date":"2025-08-16","title":"Day 1: First Flight Lesson"},
