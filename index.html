@@ -107,6 +107,11 @@
                         <button id="filter-residential" onclick="filterTimelineEntries('residential')" class="timeline-filter shrink-0 px-4 py-2 rounded-full text-sm bg-gray-100 text-gray-700">Intercultural Residential</button>
                     </div>
                 </div>
+                <p class="text-sm font-semibold text-gray-600 mt-4 mb-3 text-center">Sort by date</p>
+                <div class="flex justify-center gap-2">
+                    <button id="sort-latest" onclick="setTimelineSortOrder('latest')" class="timeline-sort px-4 py-2 rounded-full text-sm bg-gray-100 text-gray-700">Latest first</button>
+                    <button id="sort-earliest" onclick="setTimelineSortOrder('earliest')" class="timeline-sort px-4 py-2 rounded-full text-sm bg-gray-800 text-white">Earliest first</button>
+                </div>
             </div>
 
             <div class="bg-white rounded-2xl shadow-lg p-4 sm:p-6">
@@ -138,6 +143,7 @@
 
     <script>
         let trackerEntries = [];
+        let timelineSortOrder = 'earliest';
 
         const trackerCategoryPages = {
             community: 'community.html',
@@ -221,13 +227,35 @@
             renderTimelineEntries(category);
         }
 
+        function setTimelineSortOrder(order) {
+            timelineSortOrder = order;
+            document.querySelectorAll('.timeline-sort').forEach(button => {
+                button.classList.remove('bg-gray-800', 'text-white');
+                button.classList.add('bg-gray-100', 'text-gray-700');
+            });
+
+            const selectedSort = document.getElementById('sort-' + order);
+            if (selectedSort) {
+                selectedSort.classList.remove('bg-gray-100', 'text-gray-700');
+                selectedSort.classList.add('bg-gray-800', 'text-white');
+            }
+
+            const activeFilter = document.querySelector('.timeline-filter.bg-gray-800');
+            const activeCategory = activeFilter ? activeFilter.id.replace('filter-', '') : 'all';
+            renderTimelineEntries(activeCategory);
+        }
+
         function renderTimelineEntries(category) {
             const container = document.getElementById('timeline-container');
             const filteredEntries = category === 'all'
                 ? trackerEntries
                 : trackerEntries.filter(entry => entry.category === category);
 
-            const sortedEntries = [...filteredEntries].sort((a, b) => new Date(a.date) - new Date(b.date));
+            const sortedEntries = [...filteredEntries].sort((a, b) => {
+                const aDate = new Date(a.date);
+                const bDate = new Date(b.date);
+                return timelineSortOrder === 'latest' ? (bDate - aDate) : (aDate - bDate);
+            });
             let html = '<div class="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gray-200"></div>';
             let lastMonth = '';
 
