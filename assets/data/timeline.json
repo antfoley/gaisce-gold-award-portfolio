@@ -31,7 +31,9 @@
       {"date":"2026-04-20","title":"Day 28: Beavers - DIL Painting"},
       {"date":"2026-04-27","title":"Day 29: Beavers - DIL Crafts Finish"},
       {"date":"2026-05-08","title":"Day 30: Beavers and Ventures - DIL Decoration"},
-      {"date":"2026-05-11","title":"Day 31: Beavers - Ice cream to celebrate DIL"}
+      {"date":"2026-05-11","title":"Day 31: Beavers - Ice cream to celebrate DIL"},
+      {"date":"2026-05-18","title":"Day 32: Beavers - Map Making"}
+      
     ],
     "physical": [
       {"date":"2025-12-04","title":"Day 1: BJJ - Return Session"},
@@ -70,7 +72,9 @@
       {"date":"2026-04-09","title":"Day 16: Wind"},
       {"date":"2026-04-15","title":"Day 17: Windshear \u0026 Turbulence"},
       {"date":"2026-04-24","title":"Day 18: Clouds"},
-      {"date":"2026-05-05","title":"Day 19: Visibility"}
+      {"date":"2026-05-05","title":"Day 19: Visibility"},
+      {"date":"2026-05-14","title":"Day 20: Air Masses and Fronts"},
+      {"date":"2026-05-19","title":"Day 21: Hazardous Weather Conditions"}
     ],
     "environment": [],
     "expedition": [],
