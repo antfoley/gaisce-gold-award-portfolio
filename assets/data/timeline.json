@@ -52,7 +52,8 @@
       {"date":"2026-04-23","title":"Day 13: BJJ - Kesa-Gatame"},
       {"date":"2026-04-30","title":"Day 14: BJJ - Competition Class"},
       {"date":"2026-05-07","title":"Day 15: BJJ - Russian Ties"},
-      {"date":"2026-05-11","title":"Day 16: BJJ - Mount Escapes"}
+      {"date":"2026-05-11","title":"Day 16: BJJ - Mount Escapes"},
+      {"date":"2026-05-28","title":"Day 17: BJJ - Competition Sparring"}
     ],
     "skill": [
       {"date":"2025-08-16","title":"Day 1: First Flight Lesson"},
@@ -75,7 +76,8 @@
       {"date":"2026-04-24","title":"Day 18: Clouds"},
       {"date":"2026-05-05","title":"Day 19: Visibility"},
       {"date":"2026-05-14","title":"Day 20: Air Masses and Fronts"},
-      {"date":"2026-05-19","title":"Day 21: Hazardous Weather Conditions"}
+      {"date":"2026-05-19","title":"Day 21: Hazardous Weather Conditions"},
+      {"date":"2026-05-29","title":"Day 22: Map Reading and Chart Interpretation"}
     ],
     "environment": [],
     "expedition": [],
