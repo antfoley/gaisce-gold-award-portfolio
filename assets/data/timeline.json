@@ -36,7 +36,8 @@
       {"date":"2026-05-25","title":"Day 33: Beavers - Map Making Continued"},
       {"date":"2026-06-05","title":"Day 34: Ventures - Pitching and Planning Night"},
       {"date":"2026-06-20","title":"Day 35: Beavers - Annual Camp"},
-      {"date":"2026-06-26","title":"Day 36: Ventures - Planning meeting"}
+      {"date":"2026-06-26","title":"Day 36: Ventures - Planning meeting"},
+      {"date":"2026-07-17","title":"Day 37: Ventures - Annual Camp Planning"}
     ],
     "physical": [
       {"date":"2025-12-04","title":"Day 1: BJJ - Return Session"},
@@ -82,7 +83,8 @@
       {"date":"2026-05-14","title":"Day 20: Air Masses and Fronts"},
       {"date":"2026-05-19","title":"Day 21: Hazardous Weather Conditions"},
       {"date":"2026-05-29","title":"Day 22: Map Reading and Chart Interpretation"},
-      {"date":"2026-06-04","title":"Day 23: Time as a factor in Navigation"}
+      {"date":"2026-06-04","title":"Day 23: Time as a factor in Navigation"},
+      {"date":"2026-07-20","title":"Day 24: Distance and Time Calculations"}
     ],
     "environment": [],
     "expedition": [],
